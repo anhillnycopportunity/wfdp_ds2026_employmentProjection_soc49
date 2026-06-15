@@ -1,0 +1,16 @@
+<!-- Container (size it however you like) -->
+<div id="chart-container" style="width:100%; height:600px;"></div>
+
+<!-- Highcharts — order matters -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>  <!-- required for bubble type -->
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<!-- Your script -->
+<script src="bubble_chart.js"></script>
+<script>
+  fetch("data_49.csv")
+    .then(r => r.text())
+    .then(csv => initChart(csv, "chart-container"))
+    .catch(err => console.error("Failed to load CSV:", err));
+</script>
