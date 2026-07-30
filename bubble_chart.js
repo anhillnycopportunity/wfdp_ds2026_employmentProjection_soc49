@@ -165,9 +165,9 @@ function initChart(csvText, containerId = "chart-container") {
       zooming: { type: "xy" },
     },
 
-    title: {
+    /* title: {
       text: "Slow Growth, High Quality Occupational Sectors: Installation, Maintenance, and Repair",
-    },
+    }, */
 
     subtitle: {
       text: "Bubble size reflects current number of jobs (2022).",
@@ -186,7 +186,7 @@ function initChart(csvText, containerId = "chart-container") {
     },
 
     xAxis: {
-      title: { text: "Projected Annualized Change Rate" },
+      title: { text: "Employment Growth Rate (Annual)" },
       labels: {
        // formatter() {
        //   return Highcharts.numberFormat(this.value, 0, ".", ",");
@@ -237,7 +237,7 @@ function initChart(csvText, containerId = "chart-container") {
       pointFormatter() {
         return (
           `Occupation: <b>${this.name}</b><br>` +
-          `Annualized Rate Change: <b>${Highcharts.numberFormat(this.x, 2)}%</b><br>` +
+          `Employment Growth Rate (Annual): <b>${Highcharts.numberFormat(this.x, 2)}%</b><br>` +
           // `Projected 10-year Net Change: <b>${Highcharts.numberFormat(this.x, 0, ".", ",")}</b><br>` +
           `Median Wage: <b>$${Highcharts.numberFormat(this.y, 0, ".", ",")}</b><br>` +
           `Total Current Jobs: <b>${Highcharts.numberFormat(this.z, 0, ".", ",")}</b><br>` +
