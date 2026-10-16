@@ -170,7 +170,7 @@ function initChart(csvText, containerId = "chart-container") {
     }, 
 
     subtitle: {
-      text: "Bubble size reflects current number of jobs (2022).",
+      text: "Bubble size represents the number of jobs in 2022",
     },
 
     legend: {
